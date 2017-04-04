@@ -1,0 +1,96 @@
+<ul class="slideshow">
+  <li>
+    <span>Image 01</span>
+  </li>
+  <li>
+    <span>Image 02</span>
+  </li>
+  <li>
+    <span>Image 03</span>
+  </li>
+</ul>
+
+<div class="home-slogan">
+  <span translate="join_play"></span><br>
+  <span translate="win"></span>
+</div>
+<div ng-show="$root.generalG" style="min-height: 80vh"></div>
+<div ng-hide="$root.generalG" class="home-form" ng-controller="SignUpController as vm" style="min-height: 80vh">
+
+  <ul class="home-tab-group">
+    <li class="tab active">
+      <a class="home-a" href="#signup">GAMEBETS</a>
+    </li>
+  </ul>
+  <div class="home-tab-content">
+    <h1 class="home-h1"></h1>
+    <form name="signupform" novalidate method="POST" id="formulario_signup" ng-submit="vm.signup()">
+      <div class="home-top-row">
+        <div class="form-group">
+          <div class="home-field-wrap">
+            <label class="home-label" translate="usuario_home">
+              <span class="req">*</span>
+            </label>
+            <input class="home-input" required ng-model="vm.datos.user" id="user" name="user" type="text" ng-maxlength="15" ng-minlength="5" ng-pattern="/^[a-zA-Z0-9]*$/" autocomplete="off"/>
+            <span class="help-block" ng-show="signupform.user.$error.required && (signupform.user.$dirty || signupform.user.$touched)" translate="required"></span>
+            <span class="help-block" ng-show="signupform.user.$error.pattern && signupform.user.$touched" translate="user_req"></span>
+            <span class="help-block" ng-show="signupform.user.$error.maxlength && signupform.user.$touched" translate="user_req_v2"></span>
+            <span class="help-block" ng-show="signupform.user.$error.minlength && signupform.user.$touched" translate="user_req_v3"></span>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="home-field-wrap">
+            <label class="home-label" translate="email_home">
+              <span class="req">*</span>
+            </label>
+            <input class="home-input home-input-special" required ng-model="vm.datos.email" id="email" name="email" type="email" autocomplete="off"/>
+          </div>
+          <span style="position:relative; top:-35px;" class="help-block" ng-show="signupform.email.$error.required && (signupform.email.$dirty || signupform.email.$touched)" translate="required"></span>
+          <span style="position:relative; top:-35px;" class="help-block" ng-show="signupform.email.$error.email && signupform.email.$touched" translate="email_valid"></span>
+
+        </div>
+
+      </div>
+
+      <div class="home-field-wrap">
+        <label class="home-label" translate="passwd_home">
+          <span class="req">*</span>
+        </label>
+        <input
+          class="home-input"
+          required
+          ng-model="vm.datos.password"
+          id="password"
+          name="password"
+          type="{{vm.inputType}}"
+          ng-maxlength="25"
+          ng-minlength="8"
+          ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/"
+          autocomplete="off"/>
+        <img class="home-input-img" src="{{vm.imgSrc}}" name="imgPasswd" alt="View/Hide Password" ng-click="vm.showHidePasswd()"/>
+        <span class="help-block" ng-show="signupform.password.$error.required && (signupform.password.$dirty || signupform.password.$touched)" translate="required"></span>
+        <span class="help-block" ng-show="signupform.password.$error.pattern && signupform.password.$touched"></span>
+        <span class="help-block" ng-show="signupform.password.$error.maxlength && signupform.password.$touched" translate="password_req"></span>
+        <span class="help-block" ng-show="signupform.password.$error.minlength && signupform.password.$touched" translate="password_req_v1"></span>
+
+      </div>
+
+      <div class="home-field-wrap">
+        <label class="home-label" translate="repeat_passwd">
+          <span class="req">*</span>
+        </label>
+        <input class="home-input" required ng-model="vm.datos.password2" id="password2" name="password2" type="{{vm.inputType2}}" autocomplete="off"/>
+        <img src="{{vm.imgSrc2}}" name="imgPasswd2" alt="View/Hide Password" ng-click="vm.showHidePasswd2()"/>
+        <span class="help-block" ng-show="signupform.password2.$error.required && (signupform.password2.$dirty || signupform.password2.$touched)" translate="required"></span>
+        <span class="help-block" ng-show="!vm.checkPasswd() && signupform.password2.$touched" translate="repeat_passwd_v1"></span>
+      </div>
+
+      <button name="send" class="home-button home-button-block" type="button" translate="sign_up_home">
+      <!-- <button type="submit" class="button button-block">SIGN UP</button> -->
+
+    </form>
+  </div>
+  <!-- Fi div home-tab-group -->
+</div>
+<!-- Fi div home-form -->

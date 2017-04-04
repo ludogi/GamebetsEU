@@ -1,0 +1,191 @@
+.contact {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+}
+.contorno {
+  float: left;
+  width: 49%;
+  border-right: 2px solid black;
+  text-align: center;
+}
+.support {
+  float: left;
+  width: 49%;
+  text-align: center;
+}
+#h1-contact {
+  text-align: center;
+  font: 100px comic, Sans-Serif;
+  letter-spacing: -5px;
+  color: #000;
+  text-shadow: -0.1em -0.1em 0em #C5C5C5;
+}
+#h1-supp {
+  text-align: center;
+  font: 100px comic, Sans-Serif;
+  letter-spacing: -5px;
+  color: #000;
+  text-shadow: -0.1em -0.1em 0em #C5C5C5;
+}
+.style-four {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.style-two {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.center {
+  margin: 0 auto;
+  width: auto;
+}
+#inputName {
+  width: 67%;
+  margin: auto auto;
+}
+#inputEmail {
+  width: 67%;
+  margin: auto 0;
+}
+#inputSubject {
+  width: 67%;
+  margin: auto 0;
+}
+#inputMessage {
+  width: 67%;
+  margin: auto 0;
+}
+.input-contact {
+  border: 5px solid black;
+  -webkit-box-shadow: inset 0 0 8px black, 0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: white;
+  margin: 0 auto 10px auto;
+}
+#submitBtn {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 66%;
+  border: grey solid 4px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+  height: 80px;
+}
+#submitBtn:hover {
+  background-color: black;
+  color: white;
+  border: grey solid 4px;
+}
+.msg_error {
+  font-weight: bold;
+  color: red;
+}
+#resultMessageFail {
+  font-weight: bold;
+  font-size:20px;
+  position: relative;
+  right: 32%;
+  text-transform: uppercase;
+  top: 340px;
+  color: red;
+}
+#resultMessageOk {
+  font-weight: bold;
+  font-size:20px;
+  position: relative;
+  right: 32%;
+  text-transform: uppercase;
+  top: 340px;
+  color: green;
+}
+.btn-supp {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  border: black solid 4px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  padding: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: 700;
+  width: 90%;
+  margin: 20px auto;
+}
+.btn-supp:hover {
+  background-color: black;
+  color: white;
+  border: grey solid 4px;
+}
+.btn-tech {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  border: black solid 4px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  padding: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: 700;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+}
+.btn-tech:hover {
+  background-color: black;
+  color: white;
+  border: grey solid 4px;
+}
+
+@media (max-width: 991px){
+  .contact {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+  }
+  .contorno {
+    float: left;
+    width: 100%;
+    border-right: none;
+    text-align: center;
+  }
+  .support {
+    border-top: 3px solid black;
+    margin-top: 50px;
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media(max-width:458px){
+  #h1-contact {
+    font: 50px comic, Sans-Serif;
+  }
+  #h1-supp {
+    font: 50px comic, Sans-Serif;
+  }
+  .btn-supp {
+    font-size: 20px;
+    padding: 15px;
+  }
+  .btn-tech {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
