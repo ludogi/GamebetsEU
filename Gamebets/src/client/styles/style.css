@@ -1,5 +1,5 @@
 body {
-  background: #fff;
+  background: black;
   font-family: 'PT Sans', sans-serif;
   padding-top: 0;
 }
@@ -26,8 +26,7 @@ h1, h2, h3, h4, h5, h6, label, p {
 
 .top-header {
   background: black;
-  border-bottom: 3px solid #bd1010;
-}
+  }
 
 ul.header-in {
   right: 20px;
@@ -86,7 +85,6 @@ ul.header-in li a:hover {
   padding: 0 15px;
 }
 
-
 /*--logo--*/
 
 .logo {
@@ -95,14 +93,24 @@ ul.header-in li a:hover {
 
 .logo h1 {
   font-size: 2em;
-  margin-top: 10px;
   font-family: 'Montserrat Alternates', sans-serif;
   text-transform: uppercase;
+  position: relative;
+  bottom: 15px;
 }
 .logo h1 img {
   max-width: 100%;
-  width: 200px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 40px;
+}
+.social {
+  max-width: 100%;
+  width: 450px;
+}
+.social img {
+  width: 40px;
+  margin-top: 4px;
 }
 .logo h1 a {
   text-decoration: none;
@@ -132,27 +140,34 @@ ul.header-in li a:hover {
   display: inline-block;
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
   font-weight: bold;
   padding: 0.5em 1.3em;
+  margin: 4px;
 }
 
 .top-nav ul li a:hover {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 .top-nav ul li a.color1:hover {
   background: #d52685;
 }
-
 .top-nav ul li a.color2:hover {
   background: #fd9f3e;
 }
-
+.top-nav ul li a.color3{
+  border-radius: 4px;
+  border: 2px solid white;
+}
 .top-nav ul li a.color3:hover {
-  background: #553a99;
+  background: #ed1c24;
+  border-radius: 2px;
+  border: 2px solid #ed1c24;
+
 }
 
 .top-nav ul li a.color4:hover {
@@ -162,15 +177,20 @@ ul.header-in li a:hover {
 .top-nav ul li a.color5:hover {
   background: #08538c;
 }
-
+.top-nav ul li a.color6{
+  border: 2px solid #ed1c24;
+  background: #ed1c24;
+  border-radius: 4px;
+}
 .top-nav ul li a.color6:hover {
-  background: #FFE500;
+  background: #ed1c24;
 }
 
 .header-top {
+  height: 100px;
   background: black;
   padding: 2em 0;
-  border-bottom: 3px solid #bd1010;
+  border-bottom: 2px solid #bd1010;
 }
 
 /*--lang--*/
