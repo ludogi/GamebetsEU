@@ -1,35 +1,45 @@
-
-  <div class="latest">
-    <article>
-      <p class="parrafo">LATEST</p>
-    </article>
-  </div>
+<div class="latest">
+  <article>
+    <p class="parrafo">LATEST</p>
+  </article>
+</div>
 
 
 <div ng-show="$root.generalG" style="min-height: 80vh"></div>
 <div ng-hide="$root.generalG" class="home-form" ng-controller="SignUpController as vm" style="min-height: 80vh">
-<div id="slider">
-</div>
-<div class="news">
-  <div class="mini_bar">
-    <p>NEWS</p>
+  <div id="slider">
   </div>
-  <ul>
-    <li>
-    <img src=""></img>
-    <article></article>  
-    </li>
-  </ul>
-</div>
+  <div class="news">
+    <div class="mini_bar">
+      <p>NEWS</p>
+    </div>
+    <ul>
+      <li>
+        <img class="img_article" src="images/lacopa.jpeg"></img>
+        <article>
+          <h1 class="h1_article">Baskonia y Giants OTB sacan el pasaje para Málaga</h1>
+          <p class="p_article">La Copa El Corte Inglés sigue su curso y hoy le tocaba los dos primeros partidos de cuartos de final, esta ronda tenía premio doble ya que no solo se avanzaba sino que también otorgaba una plaza en el evento que celebrará la LVP en Málaga. El
+            primer partido de cuartos disputado hoy fue el ThunderX3 Baskonia ...</p>
+        </article>
+      </li>
+      <li>
+        <img class="img_article" src="images/noticia2.jpeg"></img>
+        <article>
+          <h1 class="h1_article">G2 consigue su tercera LCS</h1>
+          <p class="p_article">G2 repetía final por tercera vez consecutiva mientras que los unicornios no disputaban un partido de este calibre desde 2015. Los chicos de Ocelote partían como claros favoritos tras dominar la competición de principio a fin y además llevarse
+            ambos enfrentamientos directos...</p>
+        </article>
+      </li>
+    </ul>
+  </div>
 
   <!--content-->
-
-  <!-- <ul class="home-tab-group">
-    <li class="tab active">
-      <a class="home-a" href="#signup">GAMEBETS</a>
-    </li>
-  </ul>
   <div class="home-tab-content">
+    <div class="bar_grey">
+      <div class="mini_bar">
+        <p>SIGN UP</p>
+      </div>
+    </div>
     <h1 class="home-h1"></h1>
     <form name="signupform" novalidate method="POST" id="formulario_signup" ng-submit="vm.signup()">
       <div class="home-top-row">
@@ -38,7 +48,7 @@
             <label class="home-label" translate="usuario_home">
               <span class="req">*</span>
             </label>
-            <input class="home-input" required ng-model="vm.datos.user" id="user" name="user" type="text" ng-maxlength="15" ng-minlength="5" ng-pattern="/^[a-zA-Z0-9]*$/" autocomplete="off"/>
+            <input class="home-input" required ng-model="vm.datos.user" id="user" name="user" type="text" ng-maxlength="15" ng-minlength="5" ng-pattern="/^[a-zA-Z0-9]*$/" autocomplete="off" />
             <span class="help-block" ng-show="signupform.user.$error.required && (signupform.user.$dirty || signupform.user.$touched)" translate="required"></span>
             <span class="help-block" ng-show="signupform.user.$error.pattern && signupform.user.$touched" translate="user_req"></span>
             <span class="help-block" ng-show="signupform.user.$error.maxlength && signupform.user.$touched" translate="user_req_v2"></span>
@@ -51,7 +61,7 @@
             <label class="home-label" translate="email_home">
               <span class="req">*</span>
             </label>
-            <input class="home-input home-input-special" required ng-model="vm.datos.email" id="email" name="email" type="email" autocomplete="off"/>
+            <input class="home-input home-input-special" required ng-model="vm.datos.email" id="email" name="email" type="email" autocomplete="off" />
           </div>
           <span style="position:relative; top:-35px;" class="help-block" ng-show="signupform.email.$error.required && (signupform.email.$dirty || signupform.email.$touched)" translate="required"></span>
           <span style="position:relative; top:-35px;" class="help-block" ng-show="signupform.email.$error.email && signupform.email.$touched" translate="email_valid"></span>
@@ -64,18 +74,9 @@
         <label class="home-label" translate="passwd_home">
           <span class="req">*</span>
         </label>
-        <input
-          class="home-input"
-          required
-          ng-model="vm.datos.password"
-          id="password"
-          name="password"
-          type="{{vm.inputType}}"
-          ng-maxlength="25"
-          ng-minlength="8"
-          ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/"
-          autocomplete="off"/>
-        <img class="home-input-img" src="{{vm.imgSrc}}" name="imgPasswd" alt="View/Hide Password" ng-click="vm.showHidePasswd()"/>
+        <input class="home-input" required ng-model="vm.datos.password" id="password" name="password" type="{{vm.inputType}}" ng-maxlength="25" ng-minlength="8" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" autocomplete="off"
+        />
+        <img class="home-input-img" src="{{vm.imgSrc}}" name="imgPasswd" alt="View/Hide Password" ng-click="vm.showHidePasswd()" />
         <span class="help-block" ng-show="signupform.password.$error.required && (signupform.password.$dirty || signupform.password.$touched)" translate="required"></span>
         <span class="help-block" ng-show="signupform.password.$error.pattern && signupform.password.$touched"></span>
         <span class="help-block" ng-show="signupform.password.$error.maxlength && signupform.password.$touched" translate="password_req"></span>
@@ -87,17 +88,16 @@
         <label class="home-label" translate="repeat_passwd">
           <span class="req">*</span>
         </label>
-        <input class="home-input" required ng-model="vm.datos.password2" id="password2" name="password2" type="{{vm.inputType2}}" autocomplete="off"/>
-        <img src="{{vm.imgSrc2}}" name="imgPasswd2" alt="View/Hide Password" ng-click="vm.showHidePasswd2()"/>
+        <input class="home-input" required ng-model="vm.datos.password2" id="password2" name="password2" type="{{vm.inputType2}}" autocomplete="off" />
+        <img src="{{vm.imgSrc2}}" name="imgPasswd2" alt="View/Hide Password" ng-click="vm.showHidePasswd2()" />
         <span class="help-block" ng-show="signupform.password2.$error.required && (signupform.password2.$dirty || signupform.password2.$touched)" translate="required"></span>
         <span class="help-block" ng-show="!vm.checkPasswd() && signupform.password2.$touched" translate="repeat_passwd_v1"></span>
       </div>
-
+      <hr class="hr_style">
       <button name="send" class="home-button home-button-block" type="button" translate="sign_up_home">
-      <!-- <button type="submit" class="button button-block">SIGN UP</button> -->
 
-    <!-- </form>
+</form>
   </div>
-  <!-- Fi div home-tab-group -->
-<!-- </div> -->
+  <!-- Fi div home-cntent -->
+  </div>
 <!-- Fi div home-form -->
