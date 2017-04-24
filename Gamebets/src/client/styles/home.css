@@ -5,7 +5,7 @@
 
 .help-block>izda {
   width: 50%;
-  float: left;
+
 }
 
 .help-block {
@@ -204,13 +204,56 @@ p.parrafo {
 
 /**/
 
+
+/*TOP SELLS*/
+
+#top_sells{
+  border:2px solid white;
+  max-width: 100%;
+  width: 1200px;
+  height: 400px;
+  margin-left: 80px;
+  background: white;
+
+}
+#top_sells ul{
+  list-style: none;
+}
+.top_sells_img{
+  max-width: 100%;
+  width: 280px;
+  height: 280px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.h3_top_sells{
+  max-width: 100%;
+  width: 100px;
+  font-weight: bold;
+  text-size: 16px;
+  text-transform: uppercase;
+  margin-left: 95px;
+  color: black;
+}
+.p_price{
+  font-weight: bold;
+  width: 48px;
+  text-size: 16px;
+  text-transform: uppercase;
+  margin-left: 25px;
+  color:black;
+}
+
+ /**/
 .home-tab-content {
   max-width: 100%;
   width: 470px;
   border: 2px solid white;
   margin-left: 810px;
   position: relative;
-  bottom: 453px;
+  bottom: 853px;
   background: white;
 }
 
@@ -241,7 +284,7 @@ p.parrafo {
 }
 
 .home-label .req {
-  margin: 2px;
+  /*margin: 2px;*/
   color: rgba(255, 255, 255, 0.5);
 }
 
