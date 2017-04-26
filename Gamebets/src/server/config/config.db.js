@@ -3,5 +3,5 @@ var mysql = require('mysql');
       host: '127.0.0.1',
       user: 'root',
       password: 'root',
-      database: 'GameBets_DB'
+      database: 'Gamebets'
   });
