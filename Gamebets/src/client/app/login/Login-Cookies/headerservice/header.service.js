@@ -29,6 +29,7 @@
         $rootScope.generalG = true;
         $rootScope.socialNetwork = true;
         $rootScope.picture = user.picture;
+        $rootScope.bets = true;
 
         // redirect
         $state.go('home');
@@ -39,6 +40,7 @@
         $rootScope.profileG = false;
         $rootScope.ProfilePersonal = false;
         $rootScope.signUpG = true;
+        $rootScope.bets = false;
         // cleaning...
         $rootScope.profile = '';
         $rootScope.user = '';
@@ -65,6 +67,7 @@
       $rootScope.ProfilePersonal = false;
       $rootScope.logoutG = false;
       $rootScope.generalG = false;
+      $rootScope.bets = false;
       // redirect
       $state.go('home');
     }

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app.admin')
+    .module('app.bets')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
   function getStates() {
     return [
       {
-        state: 'admin',
+        state: 'bets',
         config: {
-          url: '/admin',
-          templateUrl: 'app/admin/admin.html',
-          controller: 'AdminController',
+          url: '/bets',
+          templateUrl: 'app/bets/bets.html',
+          controller: 'betsController',
           controllerAs: 'vm',
-          title: 'Admin',
+          title: 'bets',
           settings: {
             nav: 5,
-            content: '<i class="fa fa-lock"></i> Admin'
+            content: '<i class="fa fa-lock"></i> bets'
           }
         }
       }

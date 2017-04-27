@@ -20,7 +20,7 @@ var app =
       how_to_use: 'How To Use',
       sign_up_menu: 'Sign Up',
       login_menu: 'Log In',
-
+      bets_menu: 'Bet Now'
     });
 
     $translateProvider.translations('es', {
@@ -32,7 +32,7 @@ var app =
       how_to_use: 'Como Usar Gamebets',
       sign_up_menu: 'Regístrate',
       login_menu: 'Entrar',
-
+      bets_menu: 'Apostar Ahora'
     });
 
     $translateProvider.useSanitizeValueStrategy('escape');
