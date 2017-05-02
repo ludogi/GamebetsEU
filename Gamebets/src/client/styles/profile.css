@@ -2,19 +2,16 @@
   position: relative;
   display: block;
   bottom: 5px;
-  right: 0.2%;
-}
+  right: 0.2%; }
 
 .avatar {
   border-radius: 8px;
   border: 4px solid white;
-  border-left: 3px solid white;
-}
+  border-left: 3px solid white; }
 
 .welcome {
   border: 4px solid white;
-  border-right: 3px solid white;
-}
+  border-right: 3px solid white; }
 
 .h1-profile {
   color: black;
@@ -25,40 +22,36 @@
   margin: 0 0 24px;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 2px solid black;
-}
+  border-bottom: 2px solid black; }
 
-.avatar-profile{
-  float:right;
+.avatar-profile {
+  float: right;
   display: block;
   position: relative;
   bottom: 250px;
-  left: 400px;
-}
+  left: 400px; }
 
 .h2-profile {
   font-weight: bold;
-  color:black;
-  text-transform: uppercase;
-}
+  color: black;
+  text-transform: uppercase; }
 
 .p-profile {
   color: black;
   font-size: 22px;
   font-weight: bold;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .h2-profile::first-letter {
   color: #bd1010;
   font-weight: bold;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
-.login-profile{
-  float:left;
+.login-profile {
+  float: left;
   display: block;
   position: relative;
   top: 90px;
-  left: 200px;
-}
+  left: 200px; }
+
+/*# sourceMappingURL=profile.css.map */

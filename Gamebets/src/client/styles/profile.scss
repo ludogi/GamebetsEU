@@ -1,0 +1,77 @@
+// Variables en sass
+//colorsss
+$color_font: black;
+$white: white;
+$red: red;
+$red-gb: #bd1010;
+$black: black;
+//borders solid
+$border-2x: 2px solid;
+$border-3x: 3px solid;
+$border-4x: 4px solid;
+$upper: uppercase;
+
+.picture {
+  position: relative;
+  display: block;
+  bottom: 5px;
+  right: 0.2%;
+}
+
+.avatar {
+  border-radius: 8px;
+  border: $border-4x $white;
+  border-left: $border-3x $white;
+}
+
+.welcome {
+  border: $border-4x $white;
+  border-right: $border-3x $white;
+}
+
+.h1-profile {
+  color: $black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: $upper;
+  border-bottom: $border-2x $black;
+}
+
+.avatar-profile{
+  float:right;
+  display: block;
+  position: relative;
+  bottom: 250px;
+  left: 400px;
+}
+
+.h2-profile {
+  font-weight: bold;
+  color: $black;
+  text-transform: $upper;
+}
+
+.p-profile {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: $upper;
+}
+
+.h2-profile::first-letter {
+  color: $red-gb;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.login-profile{
+  float:left;
+  display: block;
+  position: relative;
+  top: 90px;
+  left: 200px;
+}
