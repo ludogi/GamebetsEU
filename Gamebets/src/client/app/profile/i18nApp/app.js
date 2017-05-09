@@ -13,17 +13,17 @@
 
       $translateProvider.translations('en', {
         h1_your_profile: 'Your Profile',
-        email: 'E-Mail',
-        id: 'Id',
-        username: 'Username',
-        avatar: 'Avatar',
+        email: 'E-Mail:',
+        id: 'Id:',
+        username: 'Username:',
+        avatar: 'Avatar:',
           });
       $translateProvider.translations('es', {
         h1_your_profile: 'Tu Perfil',
-        email: 'Correo Electronico',
-        id: 'Identificador',
-        username: 'Nombre del Usuario',
-        avatar: 'Icono',
+        email: 'Correo Electronico:',
+        id: 'Identificador:',
+        username: 'Nombre del Usuario:',
+        avatar: 'Icono:',
       });
 
       $translateProvider.useSanitizeValueStrategy('escape');
