@@ -14,7 +14,7 @@
               <h2 class="h2-profile" translate="id"></h2>
               <p class="p-profile"> {{$root.username}}</p>
               </br>
-              <h2 class="h2-profile" translate="usernamename"></h2>
+              <h2 class="h2-profile" translate="username"></h2>
               <p class="p-profile"> {{$root.displayName}} </p>
               </br>
             </div>
@@ -27,59 +27,6 @@
           </div>
 
         </div>
-
-
-
-        <form name="profileform" novalidate method="POST" id="formulario_profile" ng-submit="vm.updateProfile()">
-          <div class="home-top-row">
-            <div class="form-group">
-              <div class="home-field-wrap">
-                <label class="home-label" translate="usuario_home"></label>
-                <input class="home-input" required ng-model="vm.datos.usernamename" id="username" name="username" type="text" ng-maxlength="15" ng-minlength="5" ng-pattern="/^[a-zA-Z0-9]*$/" autocomplete="off" />
-                <span class="help-block" ng-show="profileform.username.$error.required && (profileform.username.$dirty || profileform.username.$touched)" translate="required"></span>
-                <span class="help-block" ng-show="profileform.username.$error.pattern && profileform.username.$touched" translate="username_req"></span>
-                <span class="help-block" ng-show="profileform.username.$error.maxlength && profileform.username.$touched" translate="username_req_v2"></span>
-                <span class="help-block" ng-show="profileform.username.$error.minlength && profileform.username.$touched" translate="username_req_v3"></span>
-
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="home-field-wrap">
-                <label class="home-label" translate="email_home">
-                  <span class="req">*</span>
-                </label>
-                <input class="home-input home-input-special" required ng-model="vm.datos.email" id="email" name="email" type="email" autocomplete="off" />
-              </div>
-              <span style="position:relative; top:-35px;" class="help-block" ng-show="profileform.email.$error.required && (profileform.email.$dirty || profileform.email.$touched)" translate="required"></span>
-              <span style="position:relative; top:-35px;" class="help-block" ng-show="profileform.email.$error.email && profileform.email.$touched" translate="email_valid"></span>
-
-            </div>
-
-          </div>
-
-          <div class="home-field-wrap">
-            <label class="home-label" translate="passwd_home">
-              <span class="req">*</span>
-            </label>
-            <input class="home-input" required ng-model="vm.datos.password" id="password" name="password" type="{{vm.inputType}}" ng-maxlength="25" ng-minlength="6" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/" autocomplete="off" />
-            <span class="help-block" ng-show="profileform.password.$error.required && (profileform.password.$dirty || profileform.password.$touched)" translate="required"></span>
-            <span class="help-block" ng-show="profileform.password.$error.pattern && profileform.password.$touched"></span>
-            <span class="help-block" ng-show="profileform.password.$error.maxlength && profileform.password.$touched" translate="password_req"></span>
-            <span class="help-block" ng-show="profileform.password.$error.minlength && profileform.password.$touched" translate="password_req_v1"></span>
-          </div>
-          <button name="send" class="home-button home-button-block" type="submit" translate="sign_up_home">
-          <!-- <button type="submit" class="button button-block">SIGN UP</button> -->
-
-        </form>
-
-
-
-
-
-
-
-
-
 
         <div class="widget-foot">
           <div class="clearfix"></div>
