@@ -11,6 +11,7 @@
     'app.contact',
     'app.chat',
     'app.login',
-    'app.profile'
+    'app.profile',
+    'app.news'
   ]);
 })();
