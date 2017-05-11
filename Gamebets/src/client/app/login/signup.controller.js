@@ -5,7 +5,7 @@
     .module('app.login')
     .controller('SignUpController', SignUpController);
 
-  SignUpController.$inject = ['dataservice', 'logger',  '$scope', '$translate', '$state',
+  SignUpController.$inject = ['dataservice', 'logger', '$scope', '$translate', '$state',
     'cookiesService', 'headerService'
   ];
   /* @ngInject */
@@ -16,7 +16,6 @@
     vm.inputType2 = 'password';
     vm.imgSrc = '../../images/view.png';
     vm.imgSrc2 = '../../images/view.png';
-
     //Datos del usuario
     vm.datos = {
       user: '',
@@ -32,18 +31,32 @@
     vm.showHidePasswd2 = showHidePasswd2;
     vm.limpiarCampos = limpiarCampos;
 
-    // activate();
-    //
-    // function activate() {
-    //   logger.info('Activated Users View');
-    // }
-
     changeLanguage();
 
     function changeLanguage() {
       $scope.changeLanguage = function(key) {
         $translate.use(key);
       };
+    }
+
+    function uploadImage() {
+      var app = angular.module('app.login', []).config(function($interpolateProvider) {
+        $interpolateProvider.startSymbol('{|');
+        $interpolateProvider.endSymbol('|}');
+      });
+
+      app.controller('imgCtrl', function($scope, $http) {
+        $scope.imageSource = "";
+        $scope.fileNameChaged = function(element) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            $scope.$apply(function() {
+              $scope.imageSource = e.target.result;
+            });
+          }
+          reader.readAsDataURL(element.files[0]);
+        }
+      });
     }
 
     function limpiarCampos() {
@@ -133,7 +146,6 @@
           } else if (response.email === vm.datos.email) {
             cookiesService.SetCredentials(response);
             logger.success('Usuario registrado con exito');
-            // $scope.signupform.hide();
             headerService.login();
             $state.go('home');
           } else {

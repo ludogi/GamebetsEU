@@ -29,8 +29,9 @@
         $rootScope.generalG = true;
         $rootScope.socialNetwork = true;
         $rootScope.picture = user.picture;
+        $rootScope.coins = user.coins;
         $rootScope.bets = true;
-
+    
         // redirect
         $state.go('home');
 
@@ -48,6 +49,7 @@
         $rootScope.logoutG = false;
         $rootScope.generalG = false;
         $rootScope.picture = '';
+        $rootScope.coins = '';
       }
     }
 
@@ -64,6 +66,7 @@
       $rootScope.displayName = '';
       $rootScope.user = '';
       $rootScope.picture = '';
+      $rootScope.coins = '';
       $rootScope.ProfilePersonal = false;
       $rootScope.logoutG = false;
       $rootScope.generalG = false;

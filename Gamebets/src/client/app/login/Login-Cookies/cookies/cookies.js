@@ -33,6 +33,7 @@
         {
           user: user,
           picture: users.picture,
+          coins: users.coins,
           email: email,
           displayName: users.displayName
         }, {
@@ -64,6 +65,7 @@
       return {
         user: user,
         picture: users.picture,
+        coins: users.coins,
         email: email,
         displayName: users.displayName
       };
@@ -81,6 +83,7 @@
         user: user,
         picture: $cookies.getObject('session').picture,
         email: email,
+        coins: $cookies.getObject('session').coins,
         displayName: $cookies.getObject('session').displayName
       };
     }

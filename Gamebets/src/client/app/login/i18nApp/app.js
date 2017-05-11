@@ -16,9 +16,9 @@ var app =
       passwd: 'Password',
       email_login: 'E-Mail',
       sign_in: 'SIGN IN',
-      login_F: 'Login using Facebook',
-      login_Tw: 'Login using Twitter',
-      login_Gplus: 'Login using Google+',
+      login_F: 'Login Facebook',
+      login_Tw: 'Login Twitter',
+      login_Gplus: 'Login Google+',
       reset_pw: '¿Forgotten your password?',
       //////////////// SIGN UP
       join_play: 'JOIN, PLAY,',

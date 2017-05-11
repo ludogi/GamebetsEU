@@ -60,9 +60,10 @@ module.exports = function(passport) {
               passwd: bcrypt.hashSync(password, null, null),
               email: req.body.email,
               displayName: username,
-              usertype: 'client'
+              usertype: 'client',
+              picture: 'https://qph.ec.quoracdn.net/main-thumb-221536082-50-eldrniuhgmwqcyhtpgnmyefaeqpuzbjn.jpeg',
+              coins: 500,
             };
-
             modeloUsuarios.insertUser(newUser, function(rows) {
               if (rows) {
                 return done(null, newUser);
@@ -115,7 +116,8 @@ module.exports = function(passport) {
             displayName: profile.name.givenName,
             usertype: 'client',
             passwd: '',
-            picture: profile._json.picture.data.url
+            picture: profile._json.picture.data.url,
+            coins: 500,
           };
 
           modeloUsuarios.insertUser(newUser, function(rows) {
@@ -157,7 +159,8 @@ module.exports = function(passport) {
             usertype: 'client',
             displayName: profile.displayName,
             passwd: '',
-            picture: profile._json.profile_image_url
+            picture: profile._json.profile_image_url,
+            coins: 500,
           };
 
           modeloUsuarios.insertUser(newUser, function(rows) {
@@ -199,7 +202,8 @@ module.exports = function(passport) {
             email: 'default',
             usertype: 'client',
             passwd: '',
-            picture: profile._json.image.url
+            picture: profile._json.image.url,
+            coins: 500,
           };
 
           modeloUsuarios.insertUser(newUser, function(rows) {

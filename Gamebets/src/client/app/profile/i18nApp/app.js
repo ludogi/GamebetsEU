@@ -17,6 +17,7 @@
         id: 'Id:',
         username: 'Username:',
         avatar: 'Avatar:',
+        coins: 'Coins'
           });
       $translateProvider.translations('es', {
         h1_your_profile: 'Tu Perfil',
@@ -24,6 +25,7 @@
         id: 'Identificador:',
         username: 'Nombre del Usuario:',
         avatar: 'Icono:',
+        coins: 'Monedas'
       });
 
       $translateProvider.useSanitizeValueStrategy('escape');

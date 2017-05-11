@@ -2,34 +2,47 @@
   max-width: 100%;
   height: 500px;
   background-color: black;
-  border: 3px solid red;
-}
+  border: 3px solid red; }
 
 .label-login {
   font-family: Arial;
   font-size: 20px;
   font-weight: bold;
   color: white;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
+.modal-content {
+  max-width: 100%;
+  height: 500px;
+  background-color: black;
+  border: 3px solid red; }
+
+.label-login {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase; }
 
 .lang-login {
-
-float:right;
-position: relative;
-top: 4px;
-right: 4px;
-
-}
+  float: right;
+  position: relative;
+  top: 4px;
+  right: 4px; }
 
 .logo-gb {
   position: absolute;
   top: 160px;
   left: 380px;
   width: 210px;
-  transform: rotate(-45deg);
-}
+  transform: rotate(-45deg); }
+
+.logo-gb {
+  position: absolute;
+  top: 160px;
+  left: 380px;
+  width: 210px;
+  transform: rotate(-45deg); }
 
 #bar-vertical-v1 {
   width: 0%;
@@ -37,37 +50,32 @@ right: 4px;
   position: absolute;
   border: 2px solid red;
   top: 80px;
-  left: 490px;
-}
+  left: 490px; }
 
 .input-email {
   width: 144%;
   height: 38px;
   border: 4px solid red;
-  background: white;
-}
+  background: white; }
 
 hr.hr-login {
   border-top: 3px double red;
   position: relative;
-  top: 40px;
-}
+  top: 40px; }
 
 hr.hr-horizontal-v1 {
   border: 2px solid red;
   width: 6%;
   position: absolute;
   left: 463px;
-  top: 182px;
-}
+  top: 182px; }
 
 hr.hr-horizontal-v2 {
   border: 2px solid red;
   width: 6%;
   position: absolute;
   left: 463px;
-  top: 352px;
-}
+  top: 352px; }
 
 #bar-vertical-v2 {
   width: 0%;
@@ -75,41 +83,32 @@ hr.hr-horizontal-v2 {
   position: absolute;
   border: 1px solid red;
   top: 373px;
-  left: 490px;
-}
+  left: 490px; }
 
 .input-passw {
   width: 120%;
   height: 38px;
   border: 4px solid red;
-  background: white;
-}
+  background: white; }
 
 .h1-login {
   margin-left: 1%;
   position: absolute;
   top: 9%;
   left: 50%;
-  color: white;
-  font-family: sans, Arial;
-  font-weight: bold;
-  font-size: 40px;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
 #email-log {
   margin-left: 1%;
   position: absolute;
   top: 24%;
-  left: 4%;
-}
+  left: 4%; }
 
 #passw-log {
   margin-left: 1%;
   position: absolute;
   top: 44%;
-  left: 4%;
-}
+  left: 4%; }
 
 #linkRest {
   margin-left: 1%;
@@ -117,32 +116,28 @@ hr.hr-horizontal-v2 {
   top: 80%;
   left: 12%;
   color: red;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .btn.btn-lg.btn-primary {
   background: red;
   border: 2px solid white;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 22px;
-}
+  font-size: 22px; }
 
 #SubmitLogin {
   margin-left: 1%;
   position: absolute;
   top: 65%;
   width: 38%;
-  left: 4%;
-}
+  left: 4%; }
 
 .logo-login {
   width: 50px;
   height: 50px;
   position: relative;
   top: 4px;
-  border-right: 2px solid white;
-}
+  border-right: 2px solid white; }
 
 .facebook {
   position: relative;
@@ -151,8 +146,7 @@ hr.hr-horizontal-v2 {
   width: 230px;
   height: 60px;
   border: 2px solid white;
-  background: #3b5998;
-}
+  background: #3b5998; }
 
 .twitter {
   position: relative;
@@ -161,8 +155,7 @@ hr.hr-horizontal-v2 {
   width: 230px;
   height: 60px;
   border: 2px solid white;
-  background: #0084b4;
-}
+  background: #0084b4; }
 
 .google {
   position: relative;
@@ -171,8 +164,7 @@ hr.hr-horizontal-v2 {
   width: 230px;
   height: 60px;
   border: 2px solid white;
-  background: #F44336;
-}
+  background: #F44336; }
 
 .login-h5 {
   position: relative;
@@ -181,10 +173,6 @@ hr.hr-horizontal-v2 {
   font-weight: bold;
   color: white;
   font-size: 16px;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  margin-bottom: 25px;
-  width: 150px;
-}
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=login.css.map */

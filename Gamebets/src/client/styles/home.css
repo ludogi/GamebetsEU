@@ -16,8 +16,8 @@ hr.hr_style {
 
 .latest {
   max-width: 100%;
-  width: 1200px;
-  margin-left: 80px;
+  width: 84.5%;
+  margin-left: 7.7777%;
   height: 32px;
   border: 2px solid grey;
   background: #202020;
@@ -48,14 +48,17 @@ p.parrafo {
   margin-left: 80px;
   margin-top: 20px; }
 
+#email{
+
+  width: 480px;
+}
 .news {
   border: 2px solid white;
   max-width: 100%;
-  width: 720px;
+  width: 45%;
   height: 443px;
-  margin-left: 80px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-left: 50%;
+  margin-top: -36.466%;
   background: white; }
 
 .news ul {
@@ -172,52 +175,14 @@ p.parrafo {
   margin-left: 200px;
   padding: 10px; }
 
-/**/
-/*TOP SELLS*/
-#top_sells {
-  border: 2px solid white;
-  max-width: 100%;
-  width: 1200px;
-  height: 400px;
-  margin-left: 80px;
-  background: white; }
-
-#top_sells ul {
-  list-style: none; }
-
-.top_sells_img {
-  max-width: 100%;
-  width: 280px;
-  height: 280px;
-  padding: 10px;
-  margin-left: 10px;
-  margin-top: 8px; }
-
-.h3_top_sells {
-  max-width: 100%;
-  width: 100px;
-  font-weight: bold;
-  text-size: 16px;
-  text-transform: uppercase;
-  margin-left: 95px;
-  color: black; }
-
-.p_price {
-  font-weight: bold;
-  width: 48px;
-  text-size: 16px;
-  text-transform: uppercase;
-  margin-left: 25px;
-  color: black; }
 
 /**/
 .home-tab-content {
   max-width: 100%;
-  width: 470px;
+  width: 40%;
+  margin-left: 7.5%;
   border: 2px solid white;
-  margin-left: 810px;
-  position: relative;
-  bottom: 853px;
+  margin-top: 5%;
   background: white; }
 
 .home-tab-content > div:last-child {
