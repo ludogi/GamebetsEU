@@ -20,7 +20,7 @@
     <div id="passw-log">
       <md-input-container class="md-block">
         <label class="label-login" translate="passwd"></label>
-        <input required ng-minlength="5" class="input-passw" ng-maxlength="10" type="password" name="passwd" ng-model="vm.datos.passwd">
+        <input required ng-minlength="5" class="input-passw" ng-maxlength="20" type="password" name="passwd" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/" ng-model="vm.datos.passwd">
         <div ng-messages="login_form.passwd.$error" role="alert">
         </div>
     </div>

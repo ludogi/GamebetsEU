@@ -20,6 +20,7 @@
     vm.datos = {
       user: '',
       email: '',
+      dni: '',
       password: '',
       password2: ''
     };
@@ -39,31 +40,13 @@
       };
     }
 
-    function uploadImage() {
-      var app = angular.module('app.login', []).config(function($interpolateProvider) {
-        $interpolateProvider.startSymbol('{|');
-        $interpolateProvider.endSymbol('|}');
-      });
-
-      app.controller('imgCtrl', function($scope, $http) {
-        $scope.imageSource = "";
-        $scope.fileNameChaged = function(element) {
-          var reader = new FileReader();
-          reader.onload = function(e) {
-            $scope.$apply(function() {
-              $scope.imageSource = e.target.result;
-            });
-          }
-          reader.readAsDataURL(element.files[0]);
-        }
-      });
-    }
 
     function limpiarCampos() {
       vm.datos.user = '';
       vm.datos.email = '';
       vm.datos.password = '';
       vm.datos.password2 = '';
+      vm.datos.dni = '';
     }
 
     function showHidePasswd() {
@@ -136,7 +119,7 @@
       $(target).hide();
     });
     //fin
-
+  
     function signup() {
       var dataUserJSON = JSON.stringify(vm.datos);
       if ($scope.signupform.$valid) {

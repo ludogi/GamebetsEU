@@ -63,6 +63,7 @@ module.exports = function(passport) {
               usertype: 'client',
               picture: 'https://qph.ec.quoracdn.net/main-thumb-221536082-50-eldrniuhgmwqcyhtpgnmyefaeqpuzbjn.jpeg',
               coins: 500,
+              dni: req.body.dni,
             };
             modeloUsuarios.insertUser(newUser, function(rows) {
               if (rows) {
@@ -118,6 +119,7 @@ module.exports = function(passport) {
             passwd: '',
             picture: profile._json.picture.data.url,
             coins: 500,
+            dni: '',
           };
 
           modeloUsuarios.insertUser(newUser, function(rows) {
@@ -157,12 +159,13 @@ module.exports = function(passport) {
             username: profile.id,
             email: 'default',
             usertype: 'client',
-            displayName: profile.displayName,
+            displayName: profile.username,
             passwd: '',
             picture: profile._json.profile_image_url,
             coins: 500,
+            dni: '',
           };
-
+          console.log(newUser);
           modeloUsuarios.insertUser(newUser, function(rows) {
             if (rows) {
               return done(null, newUser);
@@ -204,6 +207,7 @@ module.exports = function(passport) {
             passwd: '',
             picture: profile._json.image.url,
             coins: 500,
+            dni: '',
           };
 
           modeloUsuarios.insertUser(newUser, function(rows) {

@@ -48,10 +48,9 @@ p.parrafo {
   margin-left: 80px;
   margin-top: 20px; }
 
-#email{
+#email {
+  width: 480px; }
 
-  width: 480px;
-}
 .news {
   border: 2px solid white;
   max-width: 100%;
@@ -174,7 +173,6 @@ p.parrafo {
   color: grey;
   margin-left: 200px;
   padding: 10px; }
-
 
 /**/
 .home-tab-content {
@@ -355,5 +353,6 @@ p.parrafo {
 
   .home-input-special {
     margin-bottom: 40px; } }
+/*# sourceMappingURL=home.css.map */
 
 /*# sourceMappingURL=home.css.map */

@@ -16,7 +16,8 @@
       chatGetMessages: chatGetMessages,
       signup: signup,
       ControllerSocialLogin: ControllerSocialLogin,
-      localSignIn: localSignIn
+      localSignIn: localSignIn,
+      ControllerBets: ControllerBets,
     };
 
     return service;
@@ -142,6 +143,20 @@
 
     function ControllerSocialLogin() {
       return $http.get('/auth/success')
+        .then(success)
+        .catch(fail);
+
+      function success(response) {
+        return response;
+      }
+
+      function fail(e) {
+        return exception.catcher('XHR Failed for socialSignin')(e);
+      }
+    }
+
+    function ControllerBets() {
+      return $http.get('/api/bets')
         .then(success)
         .catch(fail);
 

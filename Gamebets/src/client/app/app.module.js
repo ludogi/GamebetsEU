@@ -12,6 +12,7 @@
     'app.chat',
     'app.login',
     'app.profile',
-    'app.news'
+    'app.news',
+    'app.bets_room',
   ]);
 })();

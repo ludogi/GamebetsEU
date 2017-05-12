@@ -12,6 +12,7 @@
     var states = routerHelper.getStates();
     vm.isCurrent = isCurrent;
     vm.showSignInModal = showSignInModal;
+    vm.showBetModal = showBetModal;
     vm.logout = logout;
   //  vm.changeLanguage = changeLanguage;
     activate();
@@ -49,6 +50,16 @@
         animation: 'true',
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
+        controllerAs: 'vm',
+        size: 'lg'
+      });
+    }
+
+    function showBetModal() {
+      var modalInstance = $uibModal.open({
+        animation: 'true',
+        templateUrl: 'app/bets_room/bets_popup.html',
+        controller: 'betsRoomController',
         controllerAs: 'vm',
         size: 'lg'
       });

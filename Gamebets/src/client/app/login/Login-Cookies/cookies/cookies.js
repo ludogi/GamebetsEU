@@ -35,7 +35,8 @@
           picture: users.picture,
           coins: users.coins,
           email: email,
-          displayName: users.displayName
+          displayName: users.displayName,
+          dni: users.dni,
         }, {
           expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
         });
@@ -67,7 +68,8 @@
         picture: users.picture,
         coins: users.coins,
         email: email,
-        displayName: users.displayName
+        displayName: users.displayName,
+        dni: users.dni,
       };
     }
 
@@ -84,7 +86,8 @@
         picture: $cookies.getObject('session').picture,
         email: email,
         coins: $cookies.getObject('session').coins,
-        displayName: $cookies.getObject('session').displayName
+        displayName: $cookies.getObject('session').displayName,
+        dni: $cookies.getObject('session').dni,
       };
     }
 

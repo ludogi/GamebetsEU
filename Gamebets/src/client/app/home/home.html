@@ -77,7 +77,7 @@
             <label class="home-label" translate="DNI">
               <span class="req">*</span>
             </label>
-            <input class="home-input" required ng-model="vm.datos.dni" id="dni" name="dni" type="text" ng-maxlength="8" ng-minlength="8" ng-pattern="" autocomplete="off" />
+            <input class="home-input" required ng-model="vm.datos.dni" id="dni" name="dni" type="text" ng-maxlength="9" ng-minlength="9" ng-pattern="/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/" autocomplete="off" />
             <span class="help-block" ng-show="signupform.dni.$error.required && (signupform.dni.$dirty || signupform.dni.$touched)" translate="required"></span>
             <span class="help-block" ng-show="signupform.dni.$error.pattern && signupform.dni.$touched" translate="dni_req"></span>
             <span class="help-block" ng-show="signupform.dni.$error.maxlength && signupform.dni.$touched" translate="dni_req_v2"></span>

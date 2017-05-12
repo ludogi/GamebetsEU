@@ -11,7 +11,7 @@
     var vm = this;
     $scope.pidMessages = null;
     $scope.pidPingServer = null;
-    $scope.beep = new Audio('audio/beep.ogg');
+    $scope.beep = new Audio('audio/super_mario_bros_remix.mp3');
     vm.messages = [];
     vm.online = null;
     $scope.lastMessageId = null;

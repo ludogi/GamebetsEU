@@ -31,7 +31,8 @@
         $rootScope.picture = user.picture;
         $rootScope.coins = user.coins;
         $rootScope.bets = true;
-    
+        $rootScope.dni = user.dni;
+
         // redirect
         $state.go('home');
 
@@ -44,6 +45,7 @@
         $rootScope.bets = false;
         // cleaning...
         $rootScope.profile = '';
+        $rootScope.dni = '';
         $rootScope.user = '';
         $rootScope.displayName = '';
         $rootScope.logoutG = false;
@@ -63,6 +65,7 @@
       $rootScope.signUpG = true;
       // cleaning...
       $rootScope.profile = '';
+      $rootScope.dni = '';
       $rootScope.displayName = '';
       $rootScope.user = '';
       $rootScope.picture = '';
