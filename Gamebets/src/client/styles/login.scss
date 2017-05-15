@@ -51,8 +51,28 @@ $ninetygr: rotate(-45deg);
   height: 500px;
   background-color: $black;
   border: 3px solid $red;
+  color: $white;
+}
+.h1-center {
+  margin-left: 23%;
+}
+.border-red {
+	border: $border-3x $red;
+	margin-left: 40%;
+  margin-top: 5%;
+  font-weight: bold;
+  color: $black;
+  text-align: center;
 }
 
+.h3-center {
+  margin-left: 30%;
+  color: $white;
+  border: $border-2x $white;
+  margin-top: 3%;
+  width: 50%;
+  text-align: center;
+}
 .label-login {
   font-family: Arial;
   font-size: $h4;
