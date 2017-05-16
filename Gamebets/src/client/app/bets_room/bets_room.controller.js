@@ -11,6 +11,7 @@
     function betsRoomController(dataservice, $state, $scope, $translate, $timeout, $uibModal, logger, cookiesService, headerService) {
       var vm = this;
       vm.showBetModal = showBetModal;
+      vm.bets = bets;
       vm.datos_bet = {
         coins: '',
       };
@@ -24,14 +25,13 @@
           size: 'lg'
         });
       }
-      // vm.SubmitBet = Submitbet;
+
+      function bets() {
+
+      }
 
     activate();
 
-
-    // function SubmitBet() {
-    //
-    // }
 
     function activate() {
       logger.info('Activated Bet_Room View');
