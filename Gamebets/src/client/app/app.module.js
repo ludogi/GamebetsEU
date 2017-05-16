@@ -14,5 +14,6 @@
     'app.profile',
     'app.news',
     'app.bets_room',
+    'app.events',
   ]);
 })();

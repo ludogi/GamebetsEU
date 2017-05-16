@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app.home')
+    .module('app.events')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -14,14 +14,17 @@
   function getStates() {
     return [
       {
-        state: 'home',
+        state: 'events',
         config: {
-          url: '/',
-          templateUrl: 'app/home/home.html',
-          controller: 'HomeController',
+          url: '/events',
+          templateUrl: 'app/events/events.html',
+          controller: 'eventsController',
           controllerAs: 'vm',
-          title: 'Home',
-          
+          title: 'events',
+          settings: {
+            nav: 1,
+            content: '<i class="fa fa-dashboard"></i> Events'
+          }
         }
       }
     ];

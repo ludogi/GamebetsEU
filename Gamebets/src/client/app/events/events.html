@@ -1,0 +1,14 @@
+<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'>
+      <ui-gmap-markers models="vm.markers" coords="'self'" icon="'icon'" options="vm.markersOptions" events="vm.map.markersEvents">
+      </ui-gmap-markers>
+      <ui-gmap-window show="vm.map.windows.show" coords= "vm.map.windows.model">
+        <address>
+          <label><strong>{{vm.infoWindow.nombre}}</strong></label>
+          <label>Precio: <strong>{{vm.infoWindow }} €</strong></label>
+          <div stars-menus-rating rating="{{vm.infoWindow.valoracion}}"></div>
+        </address>
+          <div>{{vm.infoWindow.nombre}}</div>
+
+      </ui-gmap-window>
+
+    </ui-gmap-google-map>
