@@ -18,7 +18,7 @@
       ControllerSocialLogin: ControllerSocialLogin,
       localSignIn: localSignIn,
       ControllerBets: ControllerBets,
-      getCurrenLocation: getCurrenLocation,
+      getEvents: getEvents,
     };
 
     return service;
@@ -170,20 +170,17 @@
       }
     }
 
-    function getCurrenLocation() {
-      var deferred = $q.defer();
-      if (!$window.navigator.geolocation) {
-        deferred.reject('Geolocation not supported');
-      } else {
-        $window.navigator.geolocation.getCurrentPosition(
-          function(position) {
-            deferred.resolve(position);
-          },
-          function(err) {
-            deferred.reject(err);
-          });
+    function getEvents() {
+
+      return $http.get('/api/events').then(success).catch(fail);
+
+      function success(response) {
+        return response.data;
       }
-      return deferred.promise;
+
+      function fail(e) {
+        return exception.catcher('XHR Failed for getEvents')(e);
+      }
     }
 
   }

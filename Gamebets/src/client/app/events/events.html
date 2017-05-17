@@ -1,14 +1,29 @@
-<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'>
-      <ui-gmap-markers models="vm.markers" coords="'self'" icon="'icon'" options="vm.markersOptions" events="vm.map.markersEvents">
-      </ui-gmap-markers>
-      <ui-gmap-window show="vm.map.windows.show" coords= "vm.map.windows.model">
-        <address>
-          <label><strong>{{vm.infoWindow.nombre}}</strong></label>
-          <label>Precio: <strong>{{vm.infoWindow }} €</strong></label>
-          <div stars-menus-rating rating="{{vm.infoWindow.valoracion}}"></div>
-        </address>
-          <div>{{vm.infoWindow.nombre}}</div>
+<section id="main" class="wrapper">
+    <div class="container">
 
-      </ui-gmap-window>
+        <header class="major">
+            <h2 class="event_title">Events</h2>
+            <p class="gm-style-iw">   Search Events: <input type="text" class="filtre" ng-model="filtro" ><hr></p>
+        </header>
 
-    </ui-gmap-google-map>
+        <div class="image fit">
+            <div id='ubicacion'></div>
+            <!-- Se escribe un mapa con la localizacion anterior-->
+            <div id="demo"></div>
+            <div id="mapholder">
+              <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'>
+
+                <ui-gmap-markers models="testMarkers" coords="'self'" icon="'icon'">
+
+              </ui-gmap-google-map>
+            </div>
+            <div class="events">
+              <div class="of" ng-repeat="event in vm.filteredEvents| filter:{name:filtro}" id="{{event.id}}">
+                  <div>
+                      <div ng-click="vm.infoMarker($index)" class="desc">{{event.name}}</div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>

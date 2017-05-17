@@ -12,7 +12,10 @@ module.exports.init = function(app) {
 
   app.use('/api', require(routesPath + 'login/login.routes'));
 
+  app.use('/api', require(routesPath + 'events/events.routes'));
+
   //esta ruta del 404 debe estar siempre la ultima
   app.use('/api', require(routesPath + '404/404.routes'));
+
 
 };

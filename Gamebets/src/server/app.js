@@ -35,7 +35,7 @@ app.use(cookieParser());//esto se debe poner sino da fallo conect.sid
 app.use(cors());
 
 require('./config/passport.js')(passport);
-
+require('./modules/events/events.routes.js')(app);
 config.init(app);
 
 /* required for passport */
