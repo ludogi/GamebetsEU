@@ -16,7 +16,7 @@
   height: 500px;
   background-color: black;
   border: 3px solid red;
-  color: white; }
+  color: black; }
 
 .h1-center {
   margin-left: 23%; }
@@ -42,7 +42,8 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  max-width: 100%; }
 
 .lang-login {
   float: right;
@@ -65,7 +66,7 @@
   transform: rotate(-45deg); }
 
 #bar-vertical-v1 {
-  width: 0%;
+  width: 0;
   height: 25%;
   position: absolute;
   border: 2px solid red;
@@ -98,7 +99,7 @@ hr.hr-horizontal-v2 {
   top: 352px; }
 
 #bar-vertical-v2 {
-  width: 0%;
+  width: 0;
   height: 25%;
   position: absolute;
   border: 1px solid red;
@@ -116,7 +117,8 @@ hr.hr-horizontal-v2 {
   position: absolute;
   top: 9%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  color: white; }
 
 #email-log {
   margin-left: 1%;
@@ -152,39 +154,17 @@ hr.hr-horizontal-v2 {
   width: 38%;
   left: 4%; }
 
-.logo-login {
+.logo-login img {
   width: 50px;
   height: 50px;
-  position: relative;
-  top: 4px;
+  margin-bottom: 20%;
   border-right: 2px solid white; }
 
-.facebook {
+.logo-login {
+  float: left;
   position: relative;
-  top: 2px;
-  left: 610px;
-  width: 230px;
-  height: 60px;
-  border: 2px solid white;
-  background: #3b5998; }
-
-.twitter {
-  position: relative;
-  top: 47px;
-  left: 610px;
-  width: 230px;
-  height: 60px;
-  border: 2px solid white;
-  background: #0084b4; }
-
-.google {
-  position: relative;
-  top: 90px;
-  left: 610px;
-  width: 230px;
-  height: 60px;
-  border: 2px solid white;
-  background: #F44336; }
+  top: 4px;
+  left: 4px; }
 
 .login-h5 {
   position: relative;
