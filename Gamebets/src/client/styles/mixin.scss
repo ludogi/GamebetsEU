@@ -24,3 +24,13 @@
   width: $width;
   max-width: $max-width;
 }
+@mixin h1-special ($margin: 0 0 0.5em, $font-weight: 600, $position: relative, $font-size: 36px, $line-height: 40px, $padding: 15px 15px 15px 15%, $color: black , $text-transform: uppercase, $border-radius: 0 10px 0 10px) {
+  margin: $margin;
+  font-weight: $font-weight;
+  position: $position;
+  font-size: $font-size;
+  line-height: $line-height;
+  padding: $padding;
+  text-transform: $text-transform;
+  color: $color;
+}

@@ -1,3 +1,4 @@
+@import "mixin";
 /*VARIABLES*/
 $white: white;
 $black: black;
@@ -45,20 +46,9 @@ header.major{
 }
 
 .event_title{
-    margin: 0 0 0.5em 0;
-    	font-weight: 600;
-    	font-family: 'Titillium Web', sans-serif;
-    	position: relative;
-    	font-size: 36px;
-    	line-height: 40px;
-    	padding: 15px 15px 15px 15%;
-    	color: $black;
-        text-transform: uppercase;
-    	box-shadow:
-    		inset 0 0 0 1px rgba(53,86,129, 0.4),
-    		inset 0 0 5px rgba(53,86,129, 0.5),
-    		inset -285px 0 35px white;
-    	border-radius: 0 10px 0 10px;
+  @include h1-special;
+  box-shadow: inset 0 0 0 1px rgba(53,86,129, 0.4), inset 0 0 5px rgba(53,86,129, 0.5), inset -285px 0 35px white;
+  font-family: 'Titillium Web', sans-serif !important;
 }
 
 .gm-style-iw {

@@ -1,141 +1,76 @@
+$black: black;
+$white: white;
+$fifty: 50%;
+$right: right;
+$red: red;
+$grey: grey;
+$black-grey: #202020;
+$uppercase: uppercase;
+
 .help-block > dcha {
-  width: 50%;
-  float: right; }
+  width: $fifty;
+  float: $right; }
 
 .help-block > izda {
-  width: 50%; }
+  width: $fifty; }
 
 .help-block {
-  color: red;
+  color: $red;
   margin-left: 20px; }
 
 hr.hr_style {
   height: 10px;
   border: 0;
-  box-shadow: 0 10px 10px -10px #8c8b8b inset; }
+  box-shadow: 0 10px 10px -10px $grey inset; }
 
 .latest {
-  max-width: 100%;
-  width: 84.5%;
-  margin-left: 7.7777%;
+  width: 90%;
+  margin-left: 5%;
   height: 32px;
   border: 2px solid grey;
   background: #202020;
-  color: white; }
+  color: $white; }
 
 p.parrafo {
-  color: white;
+  color: $white;
   font-size: 20px;
-  text-transform: uppercase;
-  border-right: 2px solid white;
-  background: #ed1c24;
+  text-transform: $uppercase;
+  border-right: 2px solid $white;
+  background: $red;
   max-width: 100%;
-  width: 100px;
+  width: 20%;
   height: 28px;
   text-align: center; }
 
-#slider {
-  width: 300px; }
-
-#slider li {
-  width: 150px; }
-
-#slider {
-  border: 2px solid grey;
-  max-width: 100%;
-  width: 1200px;
-  height: 400px;
-  margin-left: 80px;
-  margin-top: 20px; }
-
-#email{
-
-  width: 480px;
-}
 .news {
-  border: 2px solid white;
-  max-width: 100%;
-  width: 45%;
+  border: 2px solid $white;
+  margin-top: 10%;
+  margin-left: 15%;
+  width: 70%;
   height: 443px;
-  margin-left: 50%;
-  margin-top: -36.466%;
-  background: white; }
+  background: $white; }
 
 .news ul {
   list-style: none; }
 
 .mini_bar {
   border-bottom: 2px solid grey;
-  max-width: 100%;
-  width: 1200px;
+  width: 100%;
   height: 30px;
-  background: #202020; }
+  background: $black-grey;
+}
 
 .mini_bar p {
-  border-right: 2px solid white;
-  border-bottom: 2px solid grey;
+  border-right: 2px solid $white;
+  border-bottom: 2px solid $grey;
   max-width: 100%;
   width: 150px;
   height: 30px;
-  background: #ed1c24;
-  color: white;
-  text-transform: uppercase;
+  background: $red;
+  color: $white;
+  text-transform: $uppercase;
   text-align: center;
   font-size: 20px; }
-
-.home-a {
-  text-decoration: none;
-  color: #179b77;
-  -webkit-transition: .5s ease;
-  transition: .5s ease; }
-
-.home-a:hover {
-  color: #179b77; }
-
-.home-form {
-  max-width: 100%;
-  height: 1300px; }
-
-.home-slogan > span {
-  background: rgba(19, 35, 47, 0.9);
-  margin: 40px auto 40px 40px;
-  padding: 3px 20px;
-  border-radius: 4px;
-  font-family: "helvetica neue", helvetica;
-  text-transform: uppercase;
-  font-size: 4.5em;
-  color: #FFF; }
-
-.home-tab-group {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto; }
-
-.home-tab-group:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.home-tab-group li a {
-  display: block;
-  text-decoration: none;
-  padding: 15px;
-  background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
-  font-size: 4em;
-  float: left;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: .5s ease;
-  transition: .5s ease; }
-
-.games {
-  border: 2px solid white;
-  max-width: 100%;
-  width: 100px;
-  height: 200px;
-  position: relative; }
 
 .home-tab-group li a:hover {
   background: #bd1010;
@@ -178,11 +113,11 @@ p.parrafo {
 
 /**/
 .home-tab-content {
-  max-width: 100%;
-  width: 40%;
-  margin-left: 7.5%;
+
+  width: 70%;
+  margin-left: 15%;
   border: 2px solid white;
-  margin-top: 5%;
+  margin-top: 3%;
   background: white; }
 
 .home-tab-content > div:last-child {
@@ -269,16 +204,16 @@ p.parrafo {
   padding: 15px 0;
   font-size: 2rem;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: $uppercase;
   letter-spacing: .1em;
-  background: #bd1010;
-  color: white;
+  background: $grey;
+  color: $white;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none; }
 
 .home-button:hover, .home-button:focus {
-  background: #bd1010; }
+  background: $red; }
 
 .home-button-block {
   display: block;
@@ -352,7 +287,10 @@ p.parrafo {
 @media (max-width: 479px) {
   .home-top-row > div {
     width: 100%; }
-
+    .p_article {visibility: hidden;}
+    .h1_article {
+      font-size: 10px;
+    }
   .home-input-special {
     margin-bottom: 40px; } }
 

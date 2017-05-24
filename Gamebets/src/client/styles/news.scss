@@ -1,14 +1,16 @@
 //
+@import "mixin"; //
 $max: 100%;
 $padding-2x: 2%;
 $center: center;
 $solid-2x: 2px solid;
 $red: red;
 $black: black;
+$uppercase: uppercase;
 
 .notice1 {
   max-width: $max;
-  padding-bottom:$padding-2x;
+  padding-bottom: $padding-2x;
 }
 
 .notice2 {
@@ -16,23 +18,20 @@ $black: black;
   padding-bottom: $padding-2x;
 }
 
-.notice1 h2{
-    text-align: $center;
+.notice1 h2 {
+  text-align: $center;
 }
 
-
-.notice2 h2{
-    text-align: $center;
+.notice2 h2 {
+  text-align: $center;
 }
 
 .special {
-  color: $black;
-  border-top: $solid-2x $red;
-  border-bottom: $solid-2x $red;
-  font-weight: bold;
-  font-family: sans-serif;
-  text-align: $center;
+  @include h1-special;
+  box-shadow: inset 0 0 0 1px rgba(53,86,129, 0.4), inset 0 0 5px rgba(53,86,129, 0.5), inset -285px 0 35px white;
+  font-family: 'Titillium Web', sans-serif !important;
 }
+
 img.banner {
   max-width: $max;
   width: 70%;
@@ -40,11 +39,11 @@ img.banner {
   margin-bottom: 2%;
 }
 
-iframe{
+iframe {
   margin-left: 17%;
 }
 
-.date-notice{
+.date-notice {
   color: $red;
   width: $max;
 }
@@ -57,7 +56,6 @@ iframe{
   margin-left: 22%;
   margin-right: 20%;
 }
-
 
 .notice2 p {
   color: $black;
