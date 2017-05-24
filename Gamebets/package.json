@@ -4,11 +4,12 @@
   "version": "0.0.1",
   "engines": {
     "node": "6.10.2",
-    "npm": "3.10.10",
+    "npm": "3.10.10"
   },
   "scripts": {
     "init": "npm install",
     "install": "bower install",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node src/server/app.js",
     "test": "gulp test"
   },
@@ -33,9 +34,12 @@
     "passport-oauth": "^1.0.0",
     "passport-twitter": "^1.0.4",
     "serve-favicon": "^2.0.1",
-    "socket.io": "^1.7.2"
+    "socket.io": "^1.7.2",
+    "bower": "^1.8.0",
+    "gulp": "^3.8.10"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
     "browser-sync": "~2.11.2",
     "chai": "^3.1.0",
     "chai-as-promised": "^5.1.0",

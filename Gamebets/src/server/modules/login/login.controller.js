@@ -1,5 +1,7 @@
 var passport = require('passport');
 var LoginController = {};
+var modeloUsuarios = require('./login.model');
+var modeloBet = require('./../bets_room/bets_room.model');
 
 LoginController.signup = function(req, res, next) {
   passport.authenticate('local-signup', function(err, user, info) {
@@ -38,7 +40,6 @@ LoginController.facebook = function(req, res, next) {
 };
 
 LoginController.facebookCallback = function(req, res, next) {
-
   passport.authenticate('facebook', {
     successRedirect: '/socialsignin',
     failureRedirect: 'home'
@@ -57,7 +58,40 @@ LoginController.twitterCallback = function(req, res, next) {
   passport.authenticate('twitter', {
     successRedirect: '/socialsignin',
     failureRedirect: 'home'
+  });
+};
 
+LoginController.bets = function(req, res, done) {
+  //  Comprobar que devuelve un user
+  modeloUsuarios.getUserbyId(req.query.id, function(rows) {
+    if (rows) {
+      var querycoins = parseInt(req.query.coins);
+      if (rows[0].coins - querycoins >= 0) {
+        modeloUsuarios.bets({
+          coins: req.query.coins,
+          id: req.query.id
+        }, function(result) {
+          if (rows) {
+            modeloBet.insertBet({
+              user: req.query.id,
+              pending: "true",
+              datestart: ('18-06-12 10:34:09 PM'),
+              datefinish: ('18-06-12 10:34:09 PM'),
+              matches: "2",
+            }, function(rows) {
+              if (rows) {
+                return res.json({
+                  success: true
+                });
+              }
+            });
+          }
+        });
+      }else{
+       alert("NO TE QUEDNAN COINS");
+      }
+
+    }
   });
 
 };

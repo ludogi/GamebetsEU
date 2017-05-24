@@ -45,6 +45,7 @@
         } else if (response.email === vm.datos.email) {
           $uibModalInstance.dismiss('cancel');
           cookiesService.SetCredentials(response);
+          console.log(response);
           logger.success('Usuario autentificado');
           headerService.login();
           $state.go('home');

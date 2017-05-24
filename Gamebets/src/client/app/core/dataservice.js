@@ -17,7 +17,7 @@
       signup: signup,
       ControllerSocialLogin: ControllerSocialLogin,
       localSignIn: localSignIn,
-      ControllerBets: ControllerBets,
+      bets: bets,
       getEvents: getEvents,
     };
 
@@ -156,18 +156,22 @@
       }
     }
 
-    function ControllerBets() {
-      return $http.get('/api/bets')
-        .then(success)
-        .catch(fail);
+    function bets(bet) {
+      let deferred = $q.defer()
+       $http({
+          url: '/api/bets?coins='+bet.coins+'&id='+bet.id,
+          method: 'GET'
+        })
+        .then(function(responseUser) {
+            deferred.resolve(responseUser);
+          },
+          function(responseError) { // optional
+            console.log('ERRRRROR: ' + responseError);
+            deferred.reject(responseError);
+            //$state.go('login');
+          });
 
-      function success(response) {
-        return response;
-      }
-
-      function fail(e) {
-        return exception.catcher('XHR Failed for socialSignin')(e);
-      }
+          return deferred.promise;
     }
 
     function getEvents() {

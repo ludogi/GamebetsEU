@@ -1,5 +1,5 @@
 'use strict';
-
+// var login = require('./modules/login');
 var express = require('express');
 var app = express();
 var favicon = require('serve-favicon');
@@ -36,6 +36,7 @@ app.use(cors());
 
 require('./config/passport.js')(passport);
 require('./modules/events/events.routes.js')(app);
+ require('./modules/login/login.routes.js')(app);
 config.init(app);
 
 /* required for passport */
@@ -46,6 +47,8 @@ app.use(session({
 })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+//
+// app.get('/api/bets', loginController.bets);
 
 app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {

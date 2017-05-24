@@ -37,6 +37,7 @@
           email: email,
           displayName: users.displayName,
           dni: users.dni,
+          id: users.id,
         }, {
           expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
         });
@@ -70,6 +71,7 @@
         email: email,
         displayName: users.displayName,
         dni: users.dni,
+        id: users.id,
       };
     }
 
@@ -88,6 +90,7 @@
         coins: $cookies.getObject('session').coins,
         displayName: $cookies.getObject('session').displayName,
         dni: $cookies.getObject('session').dni,
+        id: $cookies.getObject('session').id,
       };
     }
 

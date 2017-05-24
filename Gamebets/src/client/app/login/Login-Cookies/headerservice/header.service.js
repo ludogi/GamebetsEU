@@ -32,8 +32,9 @@
         $rootScope.coins = user.coins;
         $rootScope.bets = true;
         $rootScope.dni = user.dni;
+        $rootScope.id = user.id;
 
-        // redirect
+      // redirect
         $state.go('home');
 
       } else {
@@ -52,6 +53,7 @@
         $rootScope.generalG = false;
         $rootScope.picture = '';
         $rootScope.coins = '';
+        $rootScope.id = '';
       }
     }
 
@@ -74,6 +76,7 @@
       $rootScope.logoutG = false;
       $rootScope.generalG = false;
       $rootScope.bets = false;
+      $rootScope.id = '';
       // redirect
       $state.go('home');
     }
