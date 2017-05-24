@@ -1,13 +1,20 @@
-/**/
+/*VARIABLES*/
+$white: white;
+$black: black;
+$grey: grey;
+$top: top;
+
+
+//
 header.major{
-    background-color: #fff;
+    background-color: $white;
     border:solid 1px rgba(144, 144, 144, 0.25);
     border-radius: 5px;
 }
 
 .events{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: $top;
     width: 39%;
 }
 
@@ -16,7 +23,7 @@ header.major{
     border-radius: 5px;
     width: 100%;
     text-align: center;
-    background-color: #fff;
+    background-color: $white;
     margin-top: 4px;
 }
 
@@ -38,33 +45,37 @@ header.major{
 }
 
 .event_title{
-    background-color: #061C33;
-    color:#f5f5f5;
-    font-size: 1.8em;
-    margin: 1em;
-    padding: 1em 1em 1em 1em;
+    margin: 0 0 0.5em 0;
+    	font-weight: 600;
+    	font-family: 'Titillium Web', sans-serif;
+    	position: relative;
+    	font-size: 36px;
+    	line-height: 40px;
+    	padding: 15px 15px 15px 15%;
+    	color: $black;
+        text-transform: uppercase;
+    	box-shadow:
+    		inset 0 0 0 1px rgba(53,86,129, 0.4),
+    		inset 0 0 5px rgba(53,86,129, 0.5),
+    		inset -285px 0 35px white;
+    	border-radius: 0 10px 0 10px;
 }
 
 .gm-style-iw {
     font-size: 1.2em;
-    text-align: center;
     top: 15px !important;
-    left: 0 !important;
-    background-color: #e9f2fc;
+    text-align: center;
+    background-color: $white;
     box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
-    border: 1px solid rgba(72, 181, 233, 0.6);
-    border-radius: 10px;
-}
+    border: 1px solid $grey;
+    }
 
 #mapholder{
     border:solid 1px rgba(144, 144, 144, 0.25);
-    border-radius: 5px;
     width: 100%;
     height: 300px;
     display: inline-block;
 }
-
-
 
 .desc{
     font-weight: bold;
@@ -73,7 +84,6 @@ header.major{
 
 .angular-google-map-container {
     border:solid 1px rgba(144, 144, 144, 0.25);
-    border-radius: 5px;
     width: 100%;
     height: 655px;
     display: inline-block;

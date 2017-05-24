@@ -1,15 +1,26 @@
 //font mixin
-@mixin label-text($family: Arial, $size: 20px, $weight: bold, $color: white, $upper: uppercase){
-    font-family: $family;
-    font-size: $size;
-    font-weight: $weight;
-    color: $color;
-    text-transform: $upper;
+@mixin label-text($family: Arial, $size: 20px, $weight: bold, $color: white, $upper: uppercase) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  text-transform: $upper;
 }
-
-@mixin modal-login($max-width: 100%, $height: 500px, $background-color: black, $border: 3px solid red){
+@mixin modal-login($max-width: 100%, $height: 500px, $background-color: black, $border: 3px solid red) {
   max-width: $max-width;
   height: $height;
   background-color: $background-color;
   border: $border;
+}
+@mixin modal-bets($max-width: 100%, $height: 500px, $width: 50%, $background-color: black, $border: 3px solid red) {
+  max-width: $max-width;
+  height: $height;
+  background-color: $background-color;
+  border: $border;
+  width: $width;
+}
+@mixin title ($color: white, $max-width: 100%, $width: 80%) {
+  color: $color;
+  width: $width;
+  max-width: $max-width;
 }
