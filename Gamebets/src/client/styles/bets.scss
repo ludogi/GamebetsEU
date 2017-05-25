@@ -8,6 +8,9 @@ $black: black; //borders solid
 $border-2x: 2px solid;
 $border-3x: 3px solid;
 $border-4x: 4px solid;
+$yellow-1: #fff700;
+$yellow-2: #fff500;
+$yellow-3: #ffd500;
 
 #contenedor {
 	max-width: 100%;
@@ -85,18 +88,18 @@ $border-4x: 4px solid;
 }
 
 .btn-style {
-	border: solid 1px #fff700;
+	border: solid 1px $yellow-1;
 	border-radius: 6px;
 	moz-border-radius: 6px;
 	font-size: 20px;
 	color: $white;
 	padding: 1px 17px;
-	background: #ffd500;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd500), color-stop(100%,#ff8c00));
-	background: -moz-linear-gradient(top, #ffd500 0%, #ff8c00 100%);
-	background: -webkit-linear-gradient(top, #ffd500 0%, #ff8c00 100%);
-	background: -o-linear-gradient(top, #ffd500 0%, #ff8c00 100%);
-	background: -ms-linear-gradient(top, #ffd500 0%, #ff8c00 100%);
-	background: linear-gradient(top, #ffd500 0%, #ff8c00 100%);
-	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr= '#ffd500', endColorstr='#ff8c00',GradientType=0 );
+	background: $yellow-3;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$yellow-3), color-stop(100%,#ff8c00));
+	background: -moz-linear-gradient(top, $yellow-3 0%, #ff8c00 100%);
+	background: -webkit-linear-gradient(top, $yellow-3 0%, #ff8c00 100%);
+	background: -o-linear-gradient(top, $yellow-3 0%, #ff8c00 100%);
+	background: -ms-linear-gradient(top, $yellow-3 0%, #ff8c00 100%);
+	background: linear-gradient(top, $yellow-3 0%, #ff8c00 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr= '$yellow-3', endColorstr='#ff8c00',GradientType=0 );
 }
