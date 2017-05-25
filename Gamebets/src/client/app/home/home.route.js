@@ -21,7 +21,11 @@
           controller: 'HomeController',
           controllerAs: 'vm',
           title: 'Home',
-          
+          settings: {
+            nav: 1,
+            content: '<i class="fa fa-dashboard"></i> Home'
+          }
+
         }
       }
     ];

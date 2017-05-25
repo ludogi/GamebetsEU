@@ -22,7 +22,7 @@
           controllerAs: 'vm',
           title: 'events',
           settings: {
-            nav: 1,
+            nav: 7,
             content: '<i class="fa fa-dashboard"></i> Events'
           }
         }
