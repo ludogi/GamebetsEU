@@ -65,6 +65,7 @@ LoginController.bets = function(req, res, done) {
   //  Comprobar que devuelve un user
   modeloUsuarios.getUserbyId(req.query.id, function(rows) {
     if (rows) {
+      var user = rows;
       var querycoins = parseInt(req.query.coins);
       if (rows[0].coins - querycoins >= 0) {
         modeloUsuarios.bets({
@@ -72,18 +73,19 @@ LoginController.bets = function(req, res, done) {
           id: req.query.id,
         }, function(result) {
           if (rows) {
-            console.log(req.query);
             modeloBet.insertBet({
               user: req.query.id,
               pending: "true",
               datestart: "2017-02-02",
               datefinish: "2017-03-02",
               betmatch: req.query.betmatch,
-            }, function(rows) {
+            }, function(result) {
               if (rows) {
                 return res.json({
-                  success: true
+                  success: true,
+                  user: user,
                 });
+
               }
             });
           }
