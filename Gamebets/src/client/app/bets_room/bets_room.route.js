@@ -12,17 +12,16 @@
   }
 
   function getStates() {
-    return [
-      {
-        state: 'bets_room',
-        config: {
-          url: '/bets_room',
-          templateUrl: 'app/bets_room/bets_room.html',
-          controller: 'betsRoomController',
-          controllerAs: 'vm',
-          title: 'bets_room',
-        }
+    return [{
+      state: 'bets_room',
+      config: {
+        url: '/bets_room',
+        templateUrl: 'app/bets_room/bets_room.html',
+        controller: 'betsRoomController',
+        controllerAs: 'vm',
+        title: 'bets_room',
+
       }
-    ];
+    }];
   }
 })();

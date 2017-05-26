@@ -5,17 +5,10 @@
     <div class="fb">
       <img class="center_img" src="images/liga_bbva.png"></img>
       <ul>
-        <li>
-          <h2>SEVILLA - CELTA DE VIGO</h2>
-          <input type="button" ng-click="vm.showBetModal()" class="btn-style" value="SEVILLA x1.50"></input>
-          <input type="button" ng-click="vm.showBetModal()" class="btn-style" value="EMPATE x4"></input>
-          <input type="button" ng-click="vm.showBetModal()" class="btn-style" value="CELTA DE VIGO x3.50"></input>
-        </li>
-        <li>
-          <h2>MADRID - ATlETICO DE MADRID</h2>
-          <input type="button" ng-click="vm.showBetModal()" class="btn-style" value="MADRID x1.10"></input>
-          <input type="button" ng-click="vm.showBetModal()" class="btn-style" value="EMPATE x4"></input>
-          <input type="button" ng-click="vm.showBetModal()" class="btn-style" value="AT.MADRID x2.30"></input>
+        <li ng-repeat="game in vm.game">
+          <h2>{{game.team1}} - {{game.team2}}</h2>
+          <input type="button" ng-click="vm.showBetModal(game.idmatch)" class="btn-style" value="{{game.team1}} x1.50"></input>
+          <input type="button" ng-click="vm.showBetModal(game.idmatch)" class="btn-style" value="{{game.team2}} x3.50"></input>
         </li>
       </ul>
     </div>

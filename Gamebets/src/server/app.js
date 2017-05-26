@@ -36,6 +36,7 @@ app.use(cors());
 
 require('./config/passport.js')(passport);
 require('./modules/events/events.routes.js')(app);
+require('./modules/bets_room/bets_room.routes.js')(app);
  require('./modules/login/login.routes.js')(app);
 config.init(app);
 

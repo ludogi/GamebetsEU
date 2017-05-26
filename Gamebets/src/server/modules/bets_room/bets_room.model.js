@@ -4,7 +4,7 @@ var modeloBet = {};
 
 modeloBet.insertBet = function(bet, callback) {
   if (mysql.connection) {
-    let sql = "INSERT INTO bets (user, pending, datestart, datefinish, matches) VALUES ("+bet.user+", "+bet.pending+", "+bet.datestart+", "+bet.datefinish+", " +bet.matches+")";
+    let sql = "INSERT INTO bets (user, pending, datestart, datefinish, betmatch) VALUES (" + bet.user + ", " + bet.pending + ", '" + bet.datestart + "', '" + bet.datefinish + "', " + bet.betmatch + ")";
     console.log(sql);
     mysql.connection.query(sql, function(err, rows) {
       if (err) {
@@ -16,9 +16,9 @@ modeloBet.insertBet = function(bet, callback) {
   }
 };
 
-modeloBet.insertGame = function(bet, callback) {
+modeloBet.getGame = function(callback) {
   if (mysql.connection) {
-    let sql = "INSERT INTO bets (user, pending, datestart, datefinish, matches) VALUES ("+bet.user+", "+bet.pending+", "+bet.datestart+", "+bet.datefinish+", " +bet.matches+")";
+    let sql = 'SELECT * FROM Gamebets.`match`';
     console.log(sql);
     mysql.connection.query(sql, function(err, rows) {
       if (err) {

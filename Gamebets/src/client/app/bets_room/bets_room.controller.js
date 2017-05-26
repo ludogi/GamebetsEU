@@ -10,8 +10,7 @@
   function betsRoomController(dataservice, $state, $rootScope, $scope, $translate, $timeout, $uibModal, logger, cookiesService, headerService) {
     var vm = this;
     vm.showBetModal = showBetModal;
-    vm.betcoins = betcoins;
-    vm.bet_user = "";
+    vm.game = [];
 
     var user = cookiesService.GetCredentials();
     if (user) {
@@ -32,33 +31,54 @@
       $rootScope.id = user.id;
     }
 
-    function showBetModal() {
+    function showBetModal(idmatch) {
       var modalInstance = $uibModal.open({
         animation: 'true',
         templateUrl: 'app/bets_room/bets_popup.html',
-        controller: 'betsRoomController',
+        controller: function($rootScope) {
+
+          var vm = this;
+          vm.bet_user = ""
+          vm.betmatch = idmatch;
+          vm.betcoins = betcoins;
+
+          function betcoins(bet) {
+
+            dataservice.bets({
+              coins: vm.bet_user,
+              id: $rootScope.id,
+              betmatch: vm.betmatch,
+            }).then(function(response) {
+              $rootScope.coins = $rootScope.coins - vm.bet_user;
+            });
+          }
+        },
         controllerAs: 'vm',
-        size: 'lg'
+        size: 'lg',
+        resolve: {
+          roomCtrl: function() {
+            return vm
+          }
+        }
       });
     }
 
-    function betcoins(bet) {
-      console.log($rootScope);
-        dataservice.bets({
-        coins: vm.bet_user,
-        id: $rootScope.id
-      }).then(function(response) {
-        console.log($rootScope);
-        $rootScope.coins = $rootScope.coins - vm.bet_user;
-      });
-      // Primero restar coins - fijar fecha de inicio - pending == true - refresh coins
-    }
 
     activate();
+    getGame();
 
+    function getGame() {
+      return dataservice.getGame().then(function(data) {
+        vm.game = data;
+        console.log(vm.game);
+        return vm.game;
+      });
+    }
 
     function activate() {
-      logger.info('Activated Bet_Room View');
+      logger.info('Activated Events View');
     }
+
+
   }
 })();

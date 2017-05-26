@@ -19,6 +19,7 @@
       localSignIn: localSignIn,
       bets: bets,
       getEvents: getEvents,
+      getGame: getGame,
     };
 
     return service;
@@ -159,7 +160,7 @@
     function bets(bet) {
       let deferred = $q.defer()
        $http({
-          url: '/api/bets?coins='+bet.coins+'&id='+bet.id,
+          url: '/api/bets?coins='+bet.coins+'&id='+bet.id+'&betmatch='+bet.betmatch,
           method: 'GET'
         })
         .then(function(responseUser) {
@@ -168,7 +169,6 @@
           function(responseError) { // optional
             console.log('ERRRRROR: ' + responseError);
             deferred.reject(responseError);
-            //$state.go('login');
           });
 
           return deferred.promise;
@@ -184,6 +184,21 @@
 
       function fail(e) {
         return exception.catcher('XHR Failed for getEvents')(e);
+      }
+    }
+
+    function getGame() {
+
+      return $http.get('/api/games').then(success,fail);
+
+      function success(response) {
+        return response.data;
+        console.log("funcionaaaaaaa");
+      }
+
+      function fail(e) {
+        console.log("ENTRO AQUI ERROR");
+        return exception.catcher('XHR Failed for getGames')(e);
       }
     }
 

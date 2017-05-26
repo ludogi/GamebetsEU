@@ -69,15 +69,16 @@ LoginController.bets = function(req, res, done) {
       if (rows[0].coins - querycoins >= 0) {
         modeloUsuarios.bets({
           coins: req.query.coins,
-          id: req.query.id
+          id: req.query.id,
         }, function(result) {
           if (rows) {
+            console.log(req.query);
             modeloBet.insertBet({
               user: req.query.id,
               pending: "true",
-              datestart: ('18-06-12 10:34:09 PM'),
-              datefinish: ('18-06-12 10:34:09 PM'),
-              matches: "2",
+              datestart: "2017-02-02",
+              datefinish: "2017-03-02",
+              betmatch: req.query.betmatch,
             }, function(rows) {
               if (rows) {
                 return res.json({
