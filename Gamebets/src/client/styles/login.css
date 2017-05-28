@@ -181,4 +181,17 @@ hr.hr-horizontal-v2 {
   font-size: 16px;
   text-transform: uppercase; }
 
+@media (max-width: 565px) {
+  .h1-login {
+    font-size: 14px;
+    font-weight: bold; }
+
+  .input-email {
+    width: 100%;
+    border: 1px solid white; }
+
+  .input-passw {
+    width: 100%;
+    border: 1px solid white; } }
+
 /*# sourceMappingURL=login.css.map */

@@ -1,5 +1,3 @@
-<div ng-hide="$root.generalG" class="home-form" ng-controller="SignUpController as vm">
-
 <div class="latest">
   <article>
     <p class="parrafo">GAME</p>
@@ -42,13 +40,13 @@
 </div>
 <!--content-->
 <div class="home-tab-content" ng-show="!$root.id">
-  <div class="bar_grey">
+  <div class="bar_grey"  ng-hide="$root.generalG">
     <div class="mini_bar">
       <p>SIGN UP</p>
     </div>
   </div>
   <h1 class="home-h1"></h1>
-  <form name="signupform" novalidate method="POST" id="formulario_signup" ng-submit="vm.signup()">
+  <form name="signupform" novalidate method="POST" ng-hide="$root.generalG" class="home-form" ng-controller="SignUpController as vm" id="formulario_signup" ng-submit="vm.signup()">
     <div class="home-top-row">
       <div class="form-group">
         <div class="home-field-wrap">

@@ -6,6 +6,7 @@ $white: white;
 $red: red;
 $red-gb: #bd1010;
 $black: black; //borders solid
+$border-1x: 1px solid;
 $border-2x: 2px solid;
 $border-3x: 3px solid;
 $border-4x: 4px solid;
@@ -228,4 +229,19 @@ hr.hr-horizontal-v2 {
   color: white;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+@media(max-width:565px) {
+  .h1-login {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .input-email  {
+    width: 100%;
+    border: $border-1x $white;
+  }
+  .input-passw{
+    width: 100%;
+        border: $border-1x $white;
+  }
 }
