@@ -157,21 +157,38 @@
       }
     }
 
+// PROMISES NOT WORK ON GULP BUILD, YES ON HEROKU BUILD
+    // function bets(bet) {
+    //   let deferred = $q.defer()
+    //    $http({
+    //       url: '/api/bets?coins='+bet.coins+'&id='+bet.id+'&betmatch='+bet.betmatch,
+    //       method: 'GET'
+    //     })
+    //     .then(function(responseUser) {
+    //         deferred.resolve(responseUser);
+    //       },
+    //       function(responseError) { // optional
+    //         console.log('ERRRRROR: ' + responseError);
+    //         deferred.reject(responseError);
+    //       });
+    //
+    //       return deferred.promise;
+    // }
+
+
     function bets(bet) {
-      let deferred = $q.defer()
-       $http({
-          url: '/api/bets?coins='+bet.coins+'&id='+bet.id+'&betmatch='+bet.betmatch,
+      return $http({
+          url: '/api/bets?coins=' + bet.coins + '&id=' + bet.id + '&betmatch=' + bet.betmatch,
           method: 'GET'
         })
         .then(function(responseUser) {
-            deferred.resolve(responseUser);
+            return responseUser.data;
+
           },
           function(responseError) { // optional
             console.log('ERRRRROR: ' + responseError);
-            deferred.reject(responseError);
+            //$state.go('login');
           });
-
-          return deferred.promise;
     }
 
     function getEvents() {
@@ -189,7 +206,7 @@
 
     function getGame() {
 
-      return $http.get('/api/games').then(success,fail);
+      return $http.get('/api/games').then(success, fail);
 
       function success(response) {
         return response.data;
