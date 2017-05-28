@@ -92,6 +92,7 @@
           <span class="req">*</span>
         </label>
       <input class="home-input" required ng-model="vm.datos.password" id="password" name="password" type="{{vm.inputType}}" ng-maxlength="25" ng-minlength="6" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/" autocomplete="off" />
+      <img class="home-input-img" src="{{vm.imgSrc}}" name="imgPasswd" alt="View/Hide Password" ng-click="vm.showHidePasswd()"/>
       <span class="help-block" ng-show="signupform.password.$error.required && (signupform.password.$dirty || signupform.password.$touched)" translate="required"></span>
       <span class="help-block" ng-show="signupform.password.$error.pattern && signupform.password.$touched"></span>
       <span class="help-block" ng-show="signupform.password.$error.maxlength && signupform.password.$touched" translate="password_req"></span>
@@ -102,6 +103,7 @@
           <span class="req">*</span>
         </label>
       <input class="home-input" required ng-model="vm.datos.password2" id="password2" name="password2" type="{{vm.inputType2}}" autocomplete="off" />
+      <img src="{{vm.imgSrc2}}" name="imgPasswd2" alt="View/Hide Password" ng-click="vm.showHidePasswd2()"/>
       <span class="help-block" ng-show="signupform.password2.$error.required && (signupform.password2.$dirty || signupform.password2.$touched)" translate="required"></span>
       <span class="help-block" ng-show="!vm.checkPasswd() && signupform.password2.$touched" translate="repeat_passwd_v1"></span>
     </div>

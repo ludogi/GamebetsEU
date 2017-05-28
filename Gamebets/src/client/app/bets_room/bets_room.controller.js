@@ -63,32 +63,41 @@
       });
     }
 
-
     activate();
     getGame();
 
     function getGame() {
       return dataservice.getGame().then(function(data) {
         vm.game = data;
-        console.log(vm.game);
         return vm.game;
       });
     }
 
-    // DateUpdate = "02/12/2017";
-    // function cronTask(){
-    //     currentdate = new Date();
-    //     if (currentdate == DateUpdate) {
-    //
-    //     } else {
-    //         setimeout(cronTask(), 60000*24);
-    //     }
-    // }
+    function cronTask() {
+      var DateUpdate = "2017-08-15";
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1; //January is 0!
+      var yyyy = today.getFullYear();
+
+      if (dd < 10) {
+        dd = '0' + dd
+      }
+      if (mm < 10) {
+        mm = '0' + mm
+      }
+      today = yyyy + '-' + mm + '-' + dd;
+      currentdate = today;
+      if (currentdate == DateUpdate) {
+        $rootScope.coins = $rootScope.coins * vm.cashteam;
+      } else {
+        setimeout(cronTask(), 60000 * 24);
+      }
+    }
 
     function activate() {
       logger.info('Activated Events View');
     }
-
 
   }
 })();

@@ -18,7 +18,6 @@
     vm.inputSubject = '';
     vm.inputMessage = '';
     vm.SubmitContact = SubmitContact;
-  //  vm.changeLanguage = changeLanguage;
 
     changeLanguage();
 
@@ -46,8 +45,7 @@
               vm.resultMessageOk = 'Email sended correctly';
               $timeout(function() {
                 vm.resultMessageOk = '';
-              //  $state.go('dashboard');
-              }, 3000);
+                }, 3000);
             } else {
               vm.resultMessageFail =
               'Error, Try later';
