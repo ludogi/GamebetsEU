@@ -40,7 +40,6 @@
       };
     }
 
-
     function limpiarCampos() {
       vm.datos.user = '';
       vm.datos.email = '';
@@ -119,7 +118,7 @@
       $(target).hide();
     });
     //fin
-  
+
     function signup() {
       var dataUserJSON = JSON.stringify(vm.datos);
       if ($scope.signupform.$valid) {
