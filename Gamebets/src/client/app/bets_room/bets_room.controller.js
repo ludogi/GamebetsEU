@@ -75,6 +75,16 @@
       });
     }
 
+    // DateUpdate = "02/12/2017";
+    // function cronTask(){
+    //     currentdate = new Date();
+    //     if (currentdate == DateUpdate) {
+    //
+    //     } else {
+    //         setimeout(cronTask(), 60000*24);
+    //     }
+    // }
+
     function activate() {
       logger.info('Activated Events View');
     }
