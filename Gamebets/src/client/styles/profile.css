@@ -24,13 +24,6 @@
   text-transform: uppercase;
   border-bottom: 2px solid black; }
 
-.avatar-profile {
-  float: right;
-  display: block;
-  position: relative;
-  bottom: 250px;
-  left: 400px; }
-
 .h2-profile {
   font-weight: bold;
   color: black;
@@ -48,10 +41,6 @@
   text-transform: uppercase; }
 
 .login-profile {
-  float: left;
-  display: block;
-  position: relative;
-  top: 90px;
-  left: 200px; }
+  margin-left: 40%; }
 
 /*# sourceMappingURL=profile.css.map */
