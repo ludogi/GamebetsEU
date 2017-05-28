@@ -1,5 +1,5 @@
 'use strict';
-// var login = require('./modules/login');
+
 var express = require('express');
 var app = express();
 var favicon = require('serve-favicon');
@@ -20,7 +20,6 @@ var environment = process.env.NODE_ENV;
 io.on('connection', function(socket) {
     console.log('Un cliente se ha conectado con id');
     socket.on('new-message', function(data) {
-      console.log('HOLA');
       socket.broadcast.emit('remit-message', data);
     });
 });
@@ -48,8 +47,6 @@ app.use(session({
 })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-//
-// app.get('/api/bets', loginController.bets);
 
 app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {

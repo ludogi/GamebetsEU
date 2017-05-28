@@ -76,8 +76,8 @@ LoginController.bets = function(req, res, done) {
             modeloBet.insertBet({
               user: req.query.id,
               pending: "true",
-              datestart: "2017-02-02",
-              datefinish: "2017-03-02",
+              datestart: "2017-08-04",
+              datefinish: "2017-08-04",
               betmatch: req.query.betmatch,
             }, function(result) {
               if (rows) {
