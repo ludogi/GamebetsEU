@@ -21,8 +21,6 @@
     vm.infoMarker = infoMarker;
 
     $scope.$watch(update);
-    // var watcher = vm.watch('./technicians.html');
-    // watcher.on('change', update);
 
     vm.map = {
       center: {
@@ -72,15 +70,6 @@
 
     function infoMarker(index) {
       $scope.selectedEvents = vm.events[index];
-      var modalInstance = $uibModal.open({
-        animation: 'true',
-        templateUrl: 'infoEvents.html',
-        controller: 'eventsController',
-        controllerAs: 'vm',
-        scope: $scope,
-        size: "lg"
-      });
-
     };
   }
 })();
