@@ -106,13 +106,10 @@ ul.header-in li a:hover {
   height: 50px;
   margin-bottom: 40px;
 }
-.social {
-  max-width: 100%;
-  width: 450px;
-}
+
 .social img {
   width: 40px;
-  margin-top: 4px;
+  margin-top: 50%;
 }
 .logo h1 a {
   text-decoration: none;
@@ -187,6 +184,8 @@ ul.header-in li a:hover {
 .top-nav ul li a.color6:hover {
   background: #ed1c24;
 }
+
+
 
 .header-top {
   height: 100px;

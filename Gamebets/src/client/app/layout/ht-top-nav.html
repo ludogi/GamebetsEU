@@ -2,9 +2,15 @@
 	<div class="container">
 		<div class="top-head">
 			<ul class="header-in">
-				<li><a href="#" translate="help"> </a></li>
-				<li><a href="/contact" translate="conact_menu"></a></li>
-				<li><a href="#" translate="how_to_use"></a></li>
+				<li>
+					<a href="#" translate="help"> </a>
+				</li>
+				<li>
+					<a href="/contact" translate="conact_menu"></a>
+				</li>
+				<li>
+					<a href="#" translate="how_to_use"></a>
+				</li>
 			</ul>
 			<div class="search">
 				<a target="_self" href="/auth/facebook">
@@ -54,6 +60,13 @@
 					<li class="nlightblue fade-selection-animation">
 						<a id='logout' ng-show="$root.logoutG" class="color4" ng-click='vm.logout()' translate="logout_menu"></a>
 					</li>
+					<li>
+
+						<img src="images/eng.svg" class="lang-en" ng-click="changeLanguage('en')"></img>
+						<img src="images/spain.svg" class="lang-es" ng-click="changeLanguage('es')"></img>
+
+					</li>
+
 					<div class="clearfix"> </div>
 				</ul>
 				<script>
@@ -62,10 +75,6 @@
 					});
 				</script>
 
-			</div>
-
-			<div class="social">
-			<a href="https://www.youtube.com/watch?v=dclu608Ebfo"><img src="images/yt.jpg"></img></a>
 			</div>
 
 		</div>
